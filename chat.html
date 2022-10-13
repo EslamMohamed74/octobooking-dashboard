@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Favicons -->
+  <link rel="icon" href="dist/img/logo/favicon.png">
+  <link rel="apple-touch-icon" href="dist/img/logo/favicon.png">
+
+  <title>Octobooking | Dashboard</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- Bootstrap 4 RTL -->
+  <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+  <!-- Custom style for RTL -->
+  <link rel="stylesheet" href="dist/css/custom.css">
+  <!-- Custom style for octobooking -->
+  <link rel="stylesheet" href="dist/css/octobooking.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="loader">
+    <div class="d-flex align-items-center justify-content-center h-100">
+      <img src="dist/img/logo/c_logo.svg" width="80px" height="80px" id="c">
+      <img src="dist/img/logo/o_logo.svg" width="80px" height="80px">
+    </div>
+  </div>
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav d-inline-block d-md-none">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+        </li>
+        <!-- <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li> -->
+      </ul>
+
+      <!-- SEARCH FORM -->
+      <form class="form-inline ml-3">
+        <div class="input-group input-group-lg">
+          <div class="input-group-append">
+            <button class="btn btn-navbar" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <input class="form-control form-control-navbar" type="search" placeholder="البحث عن منتجاتك او خدماتك"
+            aria-label="Search">
+
+        </div>
+      </form>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto mr-0">
+        <li class="nav-item ">
+          <span class="nav-link">
+            <i id="switchMode" class="fas fa-sun"></i>
+          </span>
+        </li>
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-danger navbar-badge">5</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-header">إشعارات</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              الأكثر مبيعا
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              تم حجز وحدة رقم 59233
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              ما هو لوريم ايبسوم
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              ما هو لوريم ايبسوم
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              ما هو لوريم ايبسوم
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer text-center">مشاهدة الكل</a>
+          </div>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <div class="user-panel d-flex">
+            <a href="profile.html">
+              <div class="image">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                <span class="icon-postion">
+                  <i class="fas fa-plus-circle"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar h-100 position-fixed">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link">
+        <img src="dist/img/logo/logo86.png" alt="Logo" class="img-fluid">
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex d-block d-md-none">
+          <div class="image">
+            <a href="profile.html">
+              <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            </a>
+          </div>
+          <div class="info d-flex flex-column justify-content-center">
+            <a href="profile.html" class="d-block text-white">محمد</a>
+          </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  لوحة القيادة
+                </p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  إضافة مكان او خدمة جديدة
+                  <i class="right fas fa-angle-down"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>إضافة مكان جديد</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>إضافة خدمة جديد</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>المحفوظ لاحقاً</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="offered-places.html" class="nav-link">
+                <i class="nav-icon far fa-building"></i>
+                <p>
+                  الاماكن المعروضة
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="calendar.html" class="nav-link">
+                <i class="nav-icon far fa-calendar-alt"></i>
+                <p>
+                  النتيجة
+                </p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link">
+                <i class="nav-icon far fa-comments"></i>
+                <p>
+                  الدردشة
+                  <i class="right fas fa-angle-down"></i>
+                  <span class="right badge badge-danger">3</span>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="chat.html" class="nav-link active">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>الدردشة</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>شكاوى و مقارحات</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav nav-pills nav-sidebar custom flex-column">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-cog"></i>
+                <p>
+                  الاعدادات
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-power-off"></i>
+                <p>
+                  تسجيل الخروج
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper h-100 overflow-auto">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-lg-11">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="mb-3">الدردشة</h5>
+                  </div><!-- /.col -->
+                </div>
+                <div class="row app-one">
+                  <div class="col-12 col-lg-3 side">
+                    <div class="side-one">
+                      <div class="row searchBox">
+                        <!-- <div class="col-sm-12 searchBox-inner">
+                          <div class="form-group has-feedback">
+                            <input id="searchText" type="text" class="form-control" name="searchText"
+                              placeholder="Search">
+                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                          </div>
+                        </div> -->
+                        <div class="col-sm-12 searchBox-inner">
+                          <div class="input-group">
+                            <div class="input-group-append">
+                              <i class="fas fa-search"></i>
+                            </div>
+                            <input class="form-control form-control-navbar" type="search" placeholder="البحث"
+                              aria-label="Search">
+
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="row sideBar-chat flex-column flex-nowrap">
+                        <div class="row sideBar-body">
+                          <div class="col-3 sideBar-avatar">
+                            <div class="avatar-icon">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar1.png">
+                            </div>
+                          </div>
+                          <div class="col-9 sideBar-main">
+                            <div class="row">
+                              <div class="col-8 sideBar-name">
+                                <span class="name-meta">محمد السيد
+                                </span>
+                                <small class="last-message">لوريم ايبسوم هو نموذج افتراضي</small>
+                              </div>
+                              <div class="col-4 pull-right sideBar-time text-center">
+                                <span class="time-meta pull-right">3 min ago
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row sideBar-body">
+                          <div class="col-3 sideBar-avatar">
+                            <div class="avatar-icon">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar2.png">
+                            </div>
+                          </div>
+                          <div class="col-9 sideBar-main">
+                            <div class="row">
+                              <div class="col-8 sideBar-name">
+                                <span class="name-meta">محمد السيد
+                                </span>
+                                <small class="last-message">لوريم ايبسوم هو نموذج افتراضي</small>
+                              </div>
+                              <div class="col-4 pull-right sideBar-time text-center">
+                                <span class="time-meta pull-right">3 min ago
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row sideBar-body">
+                          <div class="col-3 sideBar-avatar">
+                            <div class="avatar-icon">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar3.png">
+                            </div>
+                          </div>
+                          <div class="col-9 sideBar-main">
+                            <div class="row">
+                              <div class="col-8 sideBar-name">
+                                <span class="name-meta">محمد السيد
+                                </span>
+                                <small class="last-message">لوريم ايبسوم هو نموذج افتراضي</small>
+                              </div>
+                              <div class="col-4 pull-right sideBar-time text-center">
+                                <span class="time-meta pull-right">3 min ago
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row sideBar-body">
+                          <div class="col-3 sideBar-avatar">
+                            <div class="avatar-icon">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar4.png">
+                            </div>
+                          </div>
+                          <div class="col-9 sideBar-main">
+                            <div class="row">
+                              <div class="col-8 sideBar-name">
+                                <span class="name-meta">محمد السيد
+                                </span>
+                                <small class="last-message">لوريم ايبسوم هو نموذج افتراضي</small>
+                              </div>
+                              <div class="col-4 pull-right sideBar-time text-center">
+                                <span class="time-meta pull-right">3 min ago
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row sideBar-body">
+                          <div class="col-3 sideBar-avatar">
+                            <div class="avatar-icon">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar5.png">
+                            </div>
+                          </div>
+                          <div class="col-9 sideBar-main">
+                            <div class="row">
+                              <div class="col-8 sideBar-name">
+                                <span class="name-meta">محمد السيد
+                                </span>
+                                <small class="last-message">لوريم ايبسوم هو نموذج افتراضي</small>
+                              </div>
+                              <div class="col-4 pull-right sideBar-time text-center">
+                                <span class="time-meta pull-right">3 min ago
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row sideBar-body">
+                          <div class="col-3 sideBar-avatar">
+                            <div class="avatar-icon">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                            </div>
+                          </div>
+                          <div class="col-9 sideBar-main">
+                            <div class="row">
+                              <div class="col-8 sideBar-name">
+                                <span class="name-meta">محمد السيد
+                                </span>
+                                <small class="last-message">لوريم ايبسوم هو نموذج افتراضي</small>
+                              </div>
+                              <div class="col-4 pull-right sideBar-time text-center">
+                                <span class="time-meta pull-right">3 min ago
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row sideBar-body">
+                          <div class="col-3 sideBar-avatar">
+                            <div class="avatar-icon">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar1.png">
+                            </div>
+                          </div>
+                          <div class="col-9 sideBar-main">
+                            <div class="row">
+                              <div class="col-8 sideBar-name">
+                                <span class="name-meta">محمد السيد
+                                </span>
+                                <small class="last-message">لوريم ايبسوم هو نموذج افتراضي</small>
+                              </div>
+                              <div class="col-4 pull-right sideBar-time text-center">
+                                <span class="time-meta pull-right">3 min ago
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row sideBar-body">
+                          <div class="col-3 sideBar-avatar">
+                            <div class="avatar-icon">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar2.png">
+                            </div>
+                          </div>
+                          <div class="col-9 sideBar-main">
+                            <div class="row">
+                              <div class="col-8 sideBar-name">
+                                <span class="name-meta">محمد السيد
+                                </span>
+                                <small class="last-message">لوريم ايبسوم هو نموذج افتراضي</small>
+                              </div>
+                              <div class="col-4 pull-right sideBar-time text-center">
+                                <span class="time-meta pull-right">3 min ago
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row sideBar-body">
+                          <div class="col-3 sideBar-avatar">
+                            <div class="avatar-icon">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar4.png">
+                            </div>
+                          </div>
+                          <div class="col-9 sideBar-main">
+                            <div class="row">
+                              <div class="col-8 sideBar-name">
+                                <span class="name-meta">محمد السيد
+                                </span>
+                                <small class="last-message">لوريم ايبسوم هو نموذج افتراضي</small>
+                              </div>
+                              <div class="col-4 pull-right sideBar-time text-center">
+                                <span class="time-meta pull-right">3 min ago
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-lg-6 conversation">
+                    <div class="row heading">
+                      <div class="col-3 col-md-2 col-lg-1 heading-avatar">
+                        <div class="heading-avatar-icon">
+                          <img src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                        </div>
+                      </div>
+                      <div class="col-7 heading-name">
+                        <a class="heading-name-meta">محمد السيد
+                        </a>
+                        <span class="heading-online">عميل نشط</span>
+                      </div>
+                    </div>
+
+                    <div class="row message flex-column pt-4" id="conversation">
+                      <div class="row message-body">
+                        <div class="col-sm-12 message-main-receiver">
+                          <div class="receiver">
+                            <div class="message-text">
+                              مرحباً على ، كيف يمكنني مساعدتك؟
+                            </div>
+                            <span class="message-time pull-right">
+                              10:24 am
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row message-body">
+                        <div class="col-sm-12 message-main-sender">
+                          <div class="sender">
+                            <div class="message-text">
+                              مرحبًا محمد ، لدي سؤال بخصوص حسابي. هل لديك وقت لمكالمة؟
+                            </div>
+                            <span class="message-time pull-right">
+                              10:25 am
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row reply">
+                      <div class="col-4 col-md-1 text-center reply-emojis">
+                        <i class="fas fa-smile-beam"></i>
+                      </div>
+                      <div class="col-4 col-md-1 text-center reply-video">
+                        <i class="fas fa-film"></i>
+                      </div>
+                      <div class="col-4 col-md-1 text-center reply-link">
+                        <i class="fas fa-link"></i>
+                      </div>
+                      <div class="col-12 col-md-9 reply-main">
+                        <textarea class="form-control" rows="1" id="comment"></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-lg-3 side">
+                    <div class="side-one">
+                      <div class="row heading" style="border-bottom: 1px solid rgba(255, 255, 255, .125);">
+                        <div class="col-8 heading-name d-flex flex-column justify-content-center align-content-center">
+                            <a class="heading-name-meta">ميديا
+                            </a>
+                          </div>
+                          <div class="col text-right d-flex flex-column justify-content-center align-content-center">
+                            <i class="fas fa-times"></i>
+                          </div>
+                      </div>
+
+                      <div class="row justify-content-center mt-5 pt-5 media">
+                        <div class="col-8 d-flex flex-column justify-content-center align-content-center text-center">
+                          <img src="dist/img/media.png" alt="" class="img-fluid">
+                          <p class="media-text">لا تتوافر ميديا في الوقت الحالى</p>
+                          <button type="button" class="btn btn-primary w-75 m-auto media-text">إضافة ميديا</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+              <div class="container-fluid">
+
+                <!-- /.row -->
+              </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+      <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+
+
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.min.js"></script>
+
+  <script src="dist/js/octobooking.js"></script>
+</body>
+
+</html>

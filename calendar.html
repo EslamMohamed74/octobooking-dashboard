@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Favicons -->
+  <link rel="icon" href="dist/img/logo/favicon.png">
+  <link rel="apple-touch-icon" href="dist/img/logo/favicon.png">
+
+  <title>Octobooking | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- for this page only -->
+    <!-- fullCalendar -->
+    <link rel="stylesheet" href="plugins/fullcalendar/main.min.css">
+    <link rel="stylesheet" href="plugins/fullcalendar-interaction/main.min.css">
+    <link rel="stylesheet" href="plugins/fullcalendar-daygrid/main.min.css">
+    <link rel="stylesheet" href="plugins/fullcalendar-timegrid/main.min.css">
+    <link rel="stylesheet" href="plugins/fullcalendar-bootstrap/main.min.css">
+    <!-- for this page only -->
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- Bootstrap 4 RTL -->
+  <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+  <!-- Custom style for RTL -->
+  <link rel="stylesheet" href="dist/css/custom.css">
+  <!-- Custom style for octobooking -->
+  <link rel="stylesheet" href="dist/css/octobooking.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="loader">
+    <div class="d-flex align-items-center justify-content-center h-100">
+      <img src="dist/img/logo/c_logo.svg" width="80px" height="80px" id="c">
+      <img src="dist/img/logo/o_logo.svg" width="80px" height="80px">
+    </div>
+  </div>
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav d-inline-block d-md-none">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+        </li>
+        <!-- <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li> -->
+      </ul>
+
+      <!-- SEARCH FORM -->
+      <form class="form-inline ml-3">
+        <div class="input-group input-group-lg">
+          <div class="input-group-append">
+            <button class="btn btn-navbar" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <input class="form-control form-control-navbar" type="search" placeholder="البحث عن منتجاتك او خدماتك"
+            aria-label="Search">
+
+        </div>
+      </form>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto mr-0">
+        <li class="nav-item ">
+          <span class="nav-link">
+            <i id="switchMode" class="fas fa-sun"></i>
+          </span>
+        </li>
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-danger navbar-badge">5</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-header">إشعارات</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              الأكثر مبيعا
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              تم حجز وحدة رقم 59233
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              ما هو لوريم ايبسوم
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              ما هو لوريم ايبسوم
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              ما هو لوريم ايبسوم
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer text-center">مشاهدة الكل</a>
+          </div>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <div class="user-panel d-flex">
+            <a href="profile.html">
+              <div class="image">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                <span class="icon-postion">
+                  <i class="fas fa-plus-circle"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar h-100 position-fixed">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link">
+        <img src="dist/img/logo/logo86.png" alt="Logo" class="img-fluid">
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex d-block d-md-none">
+          <div class="image">
+            <a href="profile.html">
+              <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            </a>
+          </div>
+          <div class="info d-flex flex-column justify-content-center">
+            <a href="profile.html" class="d-block text-white">محمد</a>
+          </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  لوحة القيادة
+                </p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  إضافة مكان او خدمة جديدة
+                  <i class="right fas fa-angle-down"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>إضافة مكان جديد</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>إضافة خدمة جديد</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>المحفوظ لاحقاً</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="offered-places.html" class="nav-link">
+                <i class="nav-icon far fa-building"></i>
+                <p>
+                  الاماكن المعروضة
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="calendar.html" class="nav-link active">
+                <i class="nav-icon far fa-calendar-alt"></i>
+                <p>
+                  النتيجة
+                </p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link">
+                <i class="nav-icon far fa-comments"></i>
+                <p>
+                  الدردشة
+                  <i class="right fas fa-angle-down"></i>
+                  <span class="right badge badge-danger">3</span>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="chat.html" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>الدردشة</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>شكاوى و مقارحات</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav nav-pills nav-sidebar custom flex-column">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-cog"></i>
+                <p>
+                  الاعدادات
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-power-off"></i>
+                <p>
+                  تسجيل الخروج
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper h-100 overflow-auto">
+
+      <!-- Main content -->
+      <section class="content" style="padding-top: 9.0625rem;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-lg-7">
+              <div class="card card-primary">
+                <div class="card-body p-md-5">
+                  <!-- THE CALENDAR -->
+                  <div id="calendar"></div>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <div class="col-12 col-lg-5">
+              <div class="sticky-top mb-3">
+                <div class="card main-card">
+                  <div class="card-header calendar-card py-4 px-md-5">
+                    <div class="row">
+                      <div class="col-10">
+                      <h4 class="card-title">التقويم القادم</h4>
+                      <small class="sub-title">خطة الحجوزات القادمة في هذا الشهر </small>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                      <div class="small-box mb-0 calendar-icon d-inline-block">
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="card-body px-md-5">
+                    <div class="card small-card calendar-card">
+                      <div class="row mb-4">
+                        <div class="col-12">
+                          <h4 class="card-title">الاثنين 3 يناير</h4>
+                        </div>
+                      </div>
+                      <div class="card-header mb-4">
+                        <div class="row">
+                          <div class="col-4 col-lg-2 time d-flex flex-column justify-content-center">
+                            <h4>9:00</h4>
+                          </div>
+                          <div class="col-8 col-lg-7  d-flex flex-column justify-content-center">
+                            <small class="title">اسم الماكن او الخدمة المحجوزة</small>
+                            <div>
+                              <h3 class="number mb-0 d-inline-block">3</h3>
+                              <small class="d-inline-block">ايام</small>
+                            </div>
+                          </div>
+                          <div class="col-md-12 col-lg-2 d-flex flex-column justify-content-center pr-lg-0 text-lg-right">
+                            <small >تاريخ المغادرة</small>
+                            <small>5 / 1 / 2021</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-header mb-4">
+                        <div class="row">
+                          <div class="col-4 col-lg-2 time d-flex flex-column justify-content-center">
+                            <h4>9:00</h4>
+                          </div>
+                          <div class="col-8 col-lg-7  d-flex flex-column justify-content-center">
+                            <small class="title">اسم الماكن او الخدمة المحجوزة</small>
+                            <div>
+                              <h3 class="number mb-0 d-inline-block">3</h3>
+                              <small class="d-inline-block">ايام</small>
+                            </div>
+                          </div>
+                          <div class="col-md-12 col-lg-2 d-flex flex-column justify-content-center pr-lg-0 text-lg-right">
+                            <small >تاريخ المغادرة</small>
+                            <small>5 / 1 / 2021</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card small-card calendar-card">
+                      <div class="row mb-4">
+                        <div class="col-12">
+                          <h4 class="card-title">الاحد 16 يناير</h4>
+                        </div>
+                      </div>
+                      <div class="card-header mb-4">
+                        <div class="row">
+                          <div class="col-4 col-lg-2 time d-flex flex-column justify-content-center">
+                            <h4>9:00</h4>
+                          </div>
+                          <div class="col-8 col-lg-7  d-flex flex-column justify-content-center">
+                            <small class="title">اسم الماكن او الخدمة المحجوزة</small>
+                            <div>
+                              <h3 class="number mb-0 d-inline-block">3</h3>
+                              <small class="d-inline-block">ايام</small>
+                            </div>
+                          </div>
+                          <div class="col-md-12 col-lg-2 d-flex flex-column justify-content-center pr-lg-0 text-lg-right">
+                            <small >تاريخ المغادرة</small>
+                            <small>5 / 1 / 2021</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-header mb-4">
+                        <div class="row">
+                          <div class="col-4 col-lg-2 time d-flex flex-column justify-content-center">
+                            <h4>9:00</h4>
+                          </div>
+                          <div class="col-8 col-lg-7  d-flex flex-column justify-content-center">
+                            <small class="title">اسم الماكن او الخدمة المحجوزة</small>
+                            <div>
+                              <h3 class="number mb-0 d-inline-block">3</h3>
+                              <small class="d-inline-block">ايام</small>
+                            </div>
+                          </div>
+                          <div class="col-md-12 col-lg-2 d-flex flex-column justify-content-center pr-lg-0 text-lg-right">
+                            <small >تاريخ المغادرة</small>
+                            <small>5 / 1 / 2021</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+              </div>
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+
+  
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.min.js"></script>
+    <!-- for this page only -->
+    <!-- jQuery UI -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- fullCalendar 2.2.5 -->
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/fullcalendar/main.min.js"></script>
+    <script src="plugins/fullcalendar-daygrid/main.min.js"></script>
+    <script src="plugins/fullcalendar-timegrid/main.min.js"></script>
+    <script src="plugins/fullcalendar-interaction/main.min.js"></script>
+    <script src="plugins/fullcalendar-bootstrap/main.min.js"></script>
+    <script src="plugins/fullcalendar/locales/ar.js"></script>
+    <script src="dist/js/calendar.js"></script>
+    <!-- for this page only -->
+
+  <script src="dist/js/octobooking.js"></script>
+  <!-- Page specific script -->
+</body>
+
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Favicons -->
+  <link rel="icon" href="dist/img/logo/favicon.png">
+  <link rel="apple-touch-icon" href="dist/img/logo/favicon.png">
+
+  <title>Octobooking | Dashboard</title>
+
+  <!-- for this page only -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+  <!-- for this page only -->
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- Bootstrap 4 RTL -->
+  <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+  <!-- Custom style for RTL -->
+  <link rel="stylesheet" href="dist/css/custom.css">
+  <!-- Custom style for octobooking -->
+  <link rel="stylesheet" href="dist/css/octobooking.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="loader">
+    <div class="d-flex align-items-center justify-content-center h-100">
+      <img src="dist/img/logo/c_logo.svg" width="80px" height="80px" id="c">
+      <img src="dist/img/logo/o_logo.svg" width="80px" height="80px">
+    </div>
+  </div>
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav d-inline-block d-md-none">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+        </li>
+        <!-- <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li> -->
+      </ul>
+
+      <!-- SEARCH FORM -->
+      <form class="form-inline ml-3">
+        <div class="input-group input-group-lg">
+          <div class="input-group-append">
+            <button class="btn btn-navbar" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <input class="form-control form-control-navbar" type="search" placeholder="البحث عن منتجاتك او خدماتك"
+            aria-label="Search">
+
+        </div>
+      </form>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto mr-0">
+        <li class="nav-item ">
+          <span class="nav-link">
+            <i id="switchMode" class="fas fa-sun"></i>
+          </span>
+        </li>
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-danger navbar-badge">5</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-header">إشعارات</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              الأكثر مبيعا
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              تم حجز وحدة رقم 59233
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              ما هو لوريم ايبسوم
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              ما هو لوريم ايبسوم
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              ما هو لوريم ايبسوم
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer text-center">مشاهدة الكل</a>
+          </div>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <div class="user-panel d-flex">
+            <a href="profile.html">
+              <div class="image">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                <span class="icon-postion">
+                  <i class="fas fa-plus-circle"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar h-100 position-fixed">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link">
+        <img src="dist/img/logo/logo86.png" alt="Logo" class="img-fluid">
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex d-block d-md-none">
+          <div class="image">
+            <a href="profile.html">
+              <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            </a>
+          </div>
+          <div class="info d-flex flex-column justify-content-center">
+            <a href="profile.html" class="d-block text-white">محمد</a>
+          </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  لوحة القيادة
+                </p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  إضافة مكان او خدمة جديدة
+                  <i class="right fas fa-angle-down"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>إضافة مكان جديد</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>إضافة خدمة جديد</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>المحفوظ لاحقاً</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="offered-places.html" class="nav-link">
+                <i class="nav-icon far fa-building"></i>
+                <p>
+                  الاماكن المعروضة
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="calendar.html" class="nav-link">
+                <i class="nav-icon far fa-calendar-alt"></i>
+                <p>
+                  النتيجة
+                </p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link">
+                <i class="nav-icon far fa-comments"></i>
+                <p>
+                  الدردشة
+                  <i class="right fas fa-angle-down"></i>
+                  <span class="right badge badge-danger">3</span>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="chat.html" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>الدردشة</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>شكاوى و مقارحات</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav nav-pills nav-sidebar custom flex-column">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-cog"></i>
+                <p>
+                  الاعدادات
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-power-off"></i>
+                <p>
+                  تسجيل الخروج
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper h-100 overflow-auto">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-9">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="m-0">لوحة القيادة</h5>
+                    <small class="sub-title">البيانات الكاملة في اكتوبوكينج</small>
+                  </div><!-- /.col -->
+                </div>
+                <hr class="dark">
+                <!-- /.row -->
+                <div class="row">
+                  <div class="col-lg-7">
+                    <!-- AREA CHART -->
+                    <div class="card">
+                      <div class="card-header" style="border-bottom: 0;">
+                        <div class="row">
+                          <div class="col">
+                            <h3 class="card-title">عمليات البيع</h3>
+                          </div>
+                          <div class="col text-right">
+                            <small class="card-sub-title">اظهار النتائج من: </small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="chart dark-chart">
+                          <canvas id="areaChart" style="height:250px; min-height:250px"></canvas>
+                        </div>
+                        <div class="chart light-chart">
+                          <canvas id="areaChart-light" style="height:250px; min-height:250px"></canvas>
+                        </div>
+                        <div class="row mt-4">
+                          <div class="col-12 d-flex align-items-center">
+                            <div class="purple-circle mr-2"></div>
+                            <div class="d-inline-block" style="font-size: 12px;opacity: 80%;">
+                              اجمالى المعاملات بالريال السعودى
+
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <!-- /.card-body -->
+                    </div>
+
+                    <!-- /.card -->
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="card">
+                      <div class="card-header">
+                        <div class="row">
+                          <div class="col">
+                            <h3 class="card-title">الأماكن الأكثر مبيعا</h3>
+                          </div>
+                          <div class="col text-right">
+                            <small class="card-sub-title">ترتيب تصاعدى <i class="right fas fa-angle-down"></i></small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body py-4">
+                        <div class="row">
+                          <div class="col-8">
+                            <span class="progress-name">مكان قاعة مؤتمرات لوريم ابسيم</span>
+                          </div>
+                          <div class="col-4 text-right">
+                            <span class="progress-sell">80,451بيع</span>
+                          </div>
+                          <div class="col-12 mt-1">
+                            <div class="progress progress-xs">
+                              <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="40"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                <span class="sr-only">40% Complete (success)</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-8">
+                            <span class="progress-name">خدمة قاعة مؤتمرات لوريم ابسيم</span>
+                          </div>
+                          <div class="col-4 text-right">
+                            <span class="progress-sell">78,400بيع</span>
+                          </div>
+                          <div class="col-12 mt-1">
+                            <div class="progress progress-xs">
+                              <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="40"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                <span class="sr-only">40% Complete (success)</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-8">
+                            <span class="progress-name">خدمة قاعة مؤتمرات ابسيم</span>
+                          </div>
+                          <div class="col-4 text-right">
+                            <span class="progress-sell">75,878بيع</span>
+                          </div>
+                          <div class="col-12 mt-1">
+                            <div class="progress progress-xs">
+                              <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="40"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                                <span class="sr-only">40% Complete (success)</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-8">
+                            <span class="progress-name">مكان قاعة مؤتمرات لوريم</span>
+                          </div>
+                          <div class="col-4 text-right">
+                            <span class="progress-sell">62,557بيع</span>
+                          </div>
+                          <div class="col-12 mt-1">
+                            <div class="progress progress-xs">
+                              <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="40"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                <span class="sr-only">40% Complete (success)</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-8">
+                            <span class="progress-name">مكان قاعة مؤتمرات لوريم ابسيم</span>
+                          </div>
+                          <div class="col-4 text-right">
+                            <span class="progress-sell">30,54بيع</span>
+                          </div>
+                          <div class="col-12 mt-1">
+                            <div class="progress progress-xs mb-0">
+                              <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="40"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                <span class="sr-only">40% Complete (success)</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.card-body -->
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="card ">
+                      <div class="card-header" style="border-bottom: none;">
+                        <div class="row mt-3">
+                          <div class="col">
+                            <span class="card-title">الأماكن و الخدمات</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body p-0">
+                        <div class="table-responsive">
+                          <table id="index-table" class="table index-table table-hover">
+                          <thead>
+                            <tr>
+                              <th>المكان او الخدمة</th>
+                              <th>التقيم</th>
+                              <th>الاتاحة</th>
+                              <th>المحاسبة</th>
+                              <th>السعر بالريال</th>
+                              <th>عدد مرات بيع الخدمة</th>
+                              <th>اجمالى الايرادات</th>
+                              <th>مشاهدة الاعلان</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="available">
+                              <td class="border-Right"><img src="dist/img/meeting.png" class="img-fluid" width="48px" style="border-right: 10px;" alt="">&nbsp; قاعة مؤتمرات لوريم ابسيم</td>
+                              <td><i class="fas fa-star"></i> 3.8</td>
+                              <td><span class="calendar" id="open_dateInput1">متاح</span>
+                              <input style="height: 0px; width:0px; border: 0px; visibility: hidden;" type="text" name="dateInput1" id="dateInput1" value="">
+                              </td>
+                              <td>باليوم</td>
+                              <td>2300</td>
+                              <td>19855</td>
+                              <td>6,89221</td>
+                              <td>10,89221</td>
+                              <td><i class="fas fa-ellipsis-h"></i></td>
+                            </tr>
+                            <tr class="not-available">
+                              <td class="border-Right"><img src="dist/img/meeting.png" class="img-fluid" width="48px" style="border-right: 10px;" alt="">&nbsp; قاعة مؤتمرات لوريم ابسيم</td>
+                              <td><i class="fas fa-star"></i> 3.8</td>
+                              <td><span class="calendar" id="open_dateInput2">غير متاح</span>
+                              <input style="height: 0px; width:0px; border: 0px; visibility: hidden;" type="text" name="dateInput2" id="dateInput2" value=""></td>
+                              <td>باليوم</td>
+                              <td>2300</td>
+                              <td>19855</td>
+                              <td>6,89221</td>
+                              <td>10,89221</td>
+                              <td><i class="fas fa-ellipsis-h"></i></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+              <div class="container-fluid">
+
+                <!-- /.row -->
+              </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+          </div>
+          <div class="col-lg-3 left-side h-100">
+            <div class="content-header">
+              <div class="container-fluid px-0">
+                <div class="row">
+                  <div class="col">
+                    <div class="card main-card mb-md-0" style="border-bottom-right-radius: 0;border-bottom-left-radius: 0;">
+                      <div class="card-header">
+                        <div class="row mt-3">
+                          <div class="col">
+                            <span class="card-title">الملخص</span>
+                          </div>
+                          <div class="col text-right">
+                            <small class="card-sub-title">هذا العام <i class="right fas fa-angle-down"></i></small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body px-2">
+                        <div class="card small-card">
+                          <div class="card-header">
+                            <div class="row">
+                              <div class="col-3  d-flex flex-column justify-content-center">
+                                <div class="small-box mb-0 green-bg">
+                                  <i class="far fa-money-bill-alt"></i>
+                                </div>
+                              </div>
+                              <div class="col-6  d-flex flex-column justify-content-center">
+                                <small class="title">عدد معاملات البيع</small>
+                                <h3 class="amount mb-0">9854</h3>
+                              </div>
+                              <div class="col-2 d-flex flex-column justify-content-end pr-0 text-right">
+                                <small class="percentage green-color">68%</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card small-card">
+                          <div class="card-header">
+                            <div class="row">
+                              <div class="col-3  d-flex flex-column justify-content-center">
+                                <div class="small-box mb-0 blue-bg">
+                                  <i class="nav-icon far fa-building"></i>
+                                </div>
+                              </div>
+                              <div class="col-6  d-flex flex-column justify-content-center">
+                                <small class="title">الاماكن و الخدمات المعروضة</small>
+                                <h3 class="amount mb-0">124</h3>
+                              </div>
+                              <div class="col-2 d-flex flex-column justify-content-end pr-0 text-right">
+                                <small class="percentage blue-color">20%</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card small-card">
+                          <div class="card-header">
+                            <div class="row">
+                              <div class="col-3  d-flex flex-column justify-content-center">
+                                <div class="small-box mb-0 red-bg">
+                                  <i class="nav-icon far fa-comments"></i>
+                                </div>
+                              </div>
+                              <div class="col-6  d-flex flex-column justify-content-center" style="padding-left: 0;">
+                                <small class="title">الشكاوي و المقترحات</small>
+                                <h3 class="amount mb-0">2</h3>
+                              </div>
+                              <div class="col-2 d-flex flex-column justify-content-end pr-0 text-right">
+                                <small class="percentage red-color">12%</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="card main-card" style="border-top-right-radius: 0;border-top-left-radius: 0;">
+                      <div class="card-header">
+                        <div class="row mt-3">
+                          <div class="col">
+                            <span class="card-title">توزيع المبيعات</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <canvas id="donutChart"></canvas>
+                        </div>
+                        <div class="row mt-4">
+                          <div class="col-12 d-flex align-items-center">
+                            <div class="green-circle mr-2"></div>
+                            <div class="d-inline-block" style="font-size: 12px;opacity: 80%;">
+                              عمليات البيع
+                            </div>
+                            <div class="d-inline-block flex-grow-1"
+                              style="font-size: 12px;opacity: 60%; position: absolute;left: 5%;">
+                              68%
+                            </div>
+                          </div>
+                          <div class="col-12 mt-2 d-flex align-items-center">
+                            <div class="blue-circle mr-2"></div>
+                            <div class="d-inline-block" style="font-size: 12px;opacity: 80%;">
+                              الاماكن و الخدمات
+                            </div>
+                            <div class="d-inline-block flex-grow-1"
+                              style="font-size: 12px;opacity: 60%; position: absolute;left: 5%;">
+                              20%
+                            </div>
+                          </div>
+                          <div class="col-12 mt-2 d-flex align-items-center">
+                            <div class="red-circle mr-2"></div>
+                            <div class="d-inline-block" style="font-size: 12px;opacity: 80%;">
+                              الشكاوي و المقترحات
+                            </div>
+                            <div class="d-inline-block flex-grow-1"
+                              style="font-size: 12px;opacity: 60%; position: absolute;left: 5%;">
+                              12%
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+      <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+
+
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.min.js"></script>
+  
+  <!-- for this page only -->
+    <!-- ChartJS -->
+    <script src="plugins/chart.js/Chart.min.js"></script>
+    <!-- DataTables -->
+    <script src="plugins/datatables/jquery.dataTables.js"></script>
+    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="dist/js/datepicker-ar.js"></script>
+    <script src="dist/js/index.js"></script>
+  <!-- for this page only -->
+
+  <script src="dist/js/octobooking.js"></script>
+</body>
+
+</html>

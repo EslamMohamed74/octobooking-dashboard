@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Favicons -->
+  <link rel="icon" href="dist/img/logo/favicon.png">
+  <link rel="apple-touch-icon" href="dist/img/logo/favicon.png">
+
+  <title>Octobooking | Dashboard</title>
+  <!-- for this page only -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- for this page only -->
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- Bootstrap 4 RTL -->
+  <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+  <!-- Custom style for RTL -->
+  <link rel="stylesheet" href="dist/css/custom.css">
+  <!-- Custom style for octobooking -->
+  <link rel="stylesheet" href="dist/css/octobooking.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="loader">
+    <div class="d-flex align-items-center justify-content-center h-100">
+      <img src="dist/img/logo/c_logo.svg" width="80px" height="80px" id="c">
+      <img src="dist/img/logo/o_logo.svg" width="80px" height="80px">
+    </div>
+  </div>
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav d-inline-block d-md-none">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+        </li>
+        <!-- <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li> -->
+      </ul>
+
+      <!-- SEARCH FORM -->
+      <form class="form-inline ml-3">
+        <div class="input-group input-group-lg">
+          <div class="input-group-append">
+            <button class="btn btn-navbar" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <input class="form-control form-control-navbar" type="search" placeholder="البحث عن منتجاتك او خدماتك"
+            aria-label="Search">
+
+        </div>
+      </form>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto mr-0">
+        <li class="nav-item ">
+          <span class="nav-link">
+            <i id="switchMode" class="fas fa-sun"></i>
+          </span>
+        </li>
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-danger navbar-badge">5</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-header">إشعارات</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              الأكثر مبيعا
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              تم حجز وحدة رقم 59233
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              ما هو لوريم ايبسوم
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              ما هو لوريم ايبسوم
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              ما هو لوريم ايبسوم
+              <small class="d-block">سيت يتبيرسبايكياتيس يوندي أومنيس أستي</small>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer text-center">مشاهدة الكل</a>
+          </div>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <div class="user-panel d-flex">
+            <a href="profile.html">
+              <div class="image">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                <span class="icon-postion">
+                  <i class="fas fa-plus-circle"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar h-100 position-fixed">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link">
+        <img src="dist/img/logo/logo86.png" alt="Logo" class="img-fluid">
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex d-block d-md-none">
+          <div class="image">
+            <a href="profile.html">
+              <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            </a>
+          </div>
+          <div class="info d-flex flex-column justify-content-center">
+            <a href="profile.html" class="d-block text-white">محمد</a>
+          </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  لوحة القيادة
+                </p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  إضافة مكان او خدمة جديدة
+                  <i class="right fas fa-angle-down"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>إضافة مكان جديد</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>إضافة خدمة جديد</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>المحفوظ لاحقاً</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="offered-places.html" class="nav-link">
+                <i class="nav-icon far fa-building"></i>
+                <p>
+                  الاماكن المعروضة
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="calendar.html" class="nav-link">
+                <i class="nav-icon far fa-calendar-alt"></i>
+                <p>
+                  النتيجة
+                </p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link">
+                <i class="nav-icon far fa-comments"></i>
+                <p>
+                  الدردشة
+                  <i class="right fas fa-angle-down"></i>
+                  <span class="right badge badge-danger">3</span>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="chat.html" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>الدردشة</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <p>شكاوى و مقارحات</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav nav-pills nav-sidebar custom flex-column">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-cog"></i>
+                <p>
+                  الاعدادات
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-power-off"></i>
+                <p>
+                  تسجيل الخروج
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper h-100 overflow-auto">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-9">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+              <div class="container-fluid">
+                <div class="row">
+                  <!-- <div class="col-1" style="padding-left: 0;">
+                    <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" width="60px">
+                  </div> -->
+                  <div class="col d-flex">
+                    <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2 d-inline-block" alt="User Image"
+                      width="60px">
+                    <div class="d-inline-block pr-2 d-flex flex-column justify-content-center">
+                      <h5 class="m-0">مرحبا محمد</h5>
+                      <small class="sub-title">مرحبا بعودتك ، من الجيد رؤيتك مرة أخرى</small>
+                    </div>
+                  </div><!-- /.col -->
+                </div>
+                <hr class="dark">
+                <!-- /.row -->
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                      <div class="card-header">
+                        <div class="row">
+                          <div class="col">
+                            <h3 class="card-title">اجمالى الأماكن المعروضة</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-7">
+                            <h2>42</h2>
+                            <small class="green-color">+ 19%</small>
+                          </div>
+                          <div class="col-5 d-flex flex-column justify-content-center">
+                            <img src="dist/img/places.png" class="img-fluid" alt="" srcset="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- /.card-body -->
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                      <div class="card-header">
+                        <div class="row">
+                          <div class="col">
+                            <h3 class="card-title">الايرادات</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-7">
+                            <h2>155K</h2>
+                            <small class="purple-color">+ 25%</small>
+                          </div>
+                          <div class="col-5 d-flex flex-column justify-content-center">
+                            <img src="dist/img/revenues.png" class="img-fluid" alt="" srcset="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- /.card-body -->
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                      <div class="card-header">
+                        <div class="row">
+                          <div class="col">
+                            <h3 class="card-title">عمليات البيع</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-7">
+                            <h2>2K</h2>
+                            <small class="red-color">-1%</small>
+                          </div>
+                          <div class="col-5 d-flex flex-column justify-content-center">
+                            <img src="dist/img/selles.png" class="img-fluid" alt="" srcset="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- /.card-body -->
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card paymentCard">
+                      <div class="card-body">
+                        <div class="row card-number-row">
+                          <div class="col text-right">
+                            <p class="card-number">9867 1245 1236 1287</p>
+                          </div>
+                        </div>
+                        <div class="row card-money-row">
+                          <div class="col text-right px-0">
+                            <p class="card-date pt-1">22 / 08</p>
+                          </div>
+                          <div class="col-8 text-right">
+                            <p class="card-money">2653.25<span class="card-currency pl-1">SAR</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col-lg-7">
+                    <div class="card">
+                      <div class="card-header">
+                        <div class="row">
+                          <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+                            <h3 class="card-title">الأماكن المعروضة</h3>
+                          </div>
+                          <div class="col-12 col-lg-6 text-right mt-2 mt-lg-0">
+                            <select class="custom-select" name="" id="">
+                              <option value="">الساعة</option>
+                              <option value="">اليوم</option>
+                              <option value="">الشهر</option>
+                            </select>
+                            <select class="custom-select" name="" id="">
+                              <option value="">الأماكن المعروضة</option>
+                              <option value="">الايرادات</option>
+                              <option value="">عمليات البيع</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body py-4">
+                        <div class="chart dark-chart">
+                          <canvas id="barChart" style="height:230px; min-height:230px"></canvas>
+                        </div>
+                        <div class="chart light-chart">
+                          <canvas id="barChart-light" style="height:230px; min-height:230px"></canvas>
+                        </div>
+                        <div class="row mt-2 pt-2">
+                          <div class="col-md-6 col-lg-3">
+                            <span class="d-flex align-items-center">
+                              <div class="purple-bg mr-2"></div>
+                              <div class="d-inline-block" style="font-size: 12px;">
+                                الأماكن المتاحة
+                              </div>
+                            </span>
+                          </div>
+                          <div class="col-md-6 col-lg-3">
+                            <span class="d-flex align-items-center">
+                              <div class="green-bg mr-2"></div>
+                              <div class="d-inline-block" style="font-size: 12px;">
+                                الايرادات
+                              </div>
+                            </span>
+                          </div>
+                          <div class="col-md-6 col-lg-3">
+                            <span class="d-flex align-items-center">
+                              <div class="red-bg mr-2"></div>
+                              <div class="d-inline-block" style="font-size: 12px;">
+                                عمليات البيع
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.card-body -->
+                    </div>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="card">
+                      <div class="card-header">
+                        <div class="row">
+                          <div class="col">
+                            <h3 class="card-title p-2">مواعيد الحجوزات</h3>
+                          </div>
+                          <div class="col text-right">
+                            <button class="btn btn-outline-secondary">تعديل</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-12">
+                            <div id="datepicker"></div>
+                          </div>
+                        </div>
+                        <div class="row mt-2 pt-2">
+                          <div class="col">
+                            <span class="d-flex align-items-center">
+                              <div class="red-bg mr-2"></div>
+                              <div class="d-inline-block" style="font-size: 12px;">
+                               الأيام الغير المتاحة
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- /.card-body -->
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col">
+
+                  </div>
+                </div>
+              </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+              <div class="container-fluid">
+
+                <!-- /.row -->
+              </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+          </div>
+          <div class="col-lg-3 profile left-side">
+            <div class="content-header">
+              <div class="container-fluid px-0">
+                <div class="row">
+                  <div class="col">
+                    <!-- SEARCH FORM -->
+                    <form class="form-inline w-100">
+                      <div class="input-group input-group-lg w-100">
+                        <div class="input-group-append">
+                          <button class="btn btn-navbar" type="submit">
+                            <i class="fas fa-search"></i>
+                          </button>
+                        </div>
+                        <input class="form-control form-control-navbar" type="search" placeholder="البحث"
+                          aria-label="Search">
+
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col rtl">
+                    <h3 class="timeline-title">الاشعارات</h3>
+                    <ul class="timeline">
+                      <li class="event active" data-date="16:22 اليوم">
+                        <h3>اسم المكان او الخدمة</h3>
+                        <p>تاريخ الحجز للخدمة او المكان</p>
+                      </li>
+                      <li class="event" data-date="12:22 الأمس">
+                        <h3>اسم المكان او الخدمة</h3>
+                        <p>تاريخ الحجز للخدمة او المكان</p>
+                      </li>
+                      <li class="event" data-date="2-1-2021 10:22">
+                        <h3>اسم المكان او الخدمة</h3>
+                        <p>تاريخ الحجز للخدمة او المكان</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+      <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+
+
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.min.js"></script>
+
+  <!-- for this page only -->
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="dist/js/datepicker-ar.js"></script>
+  <script src="dist/js/profile.js"></script>
+<!-- for this page only -->
+
+  <script src="dist/js/octobooking.js"></script>
+
+</body>
+
+</html>
